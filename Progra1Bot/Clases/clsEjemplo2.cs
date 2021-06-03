@@ -108,10 +108,27 @@ namespace Progra1Bot.Clases
                 NuevaPregunta = 1;
             }
             DataTable Preguntona = conexion.ObtenerPregunta(NuevaPregunta);
+
+            Random rnd = new Random();
+            string izquierda = Preguntona.Rows[0]["correcta"].ToString();
+            string derecha = Preguntona.Rows[0]["incorrecta"].ToString();
+            if (rnd.Next(2) == 0)
+            {
+                 izquierda = Preguntona.Rows[0]["correcta"].ToString();
+                 derecha = Preguntona.Rows[0]["incorrecta"].ToString();
+            }
+            else
+            {
+                 izquierda = Preguntona.Rows[0]["incorrecta"].ToString();
+                 derecha = Preguntona.Rows[0]["correcta"].ToString();
+            }
+            
+
+
             var replyKeyboardMarkup = new ReplyKeyboardMarkup(
                    new KeyboardButton[][]
                    {
-                        new KeyboardButton[] { Preguntona.Rows[0]["correcta"].ToString(), Preguntona.Rows[0]["incorrecta"].ToString() },
+                        new KeyboardButton[] { izquierda, derecha },
                    },
                    resizeKeyboard: true
                );
