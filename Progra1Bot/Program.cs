@@ -23,7 +23,7 @@ namespace Progra1Bot
         public static async Task Main()
         {
             //await new clsEjemplo1().InicioEjemploTelegram();
-           await new clsEjemplo2().IniciarTelegram();
+           await new clsVersusBot().IniciarTelegram();
         }
 
     } // fin de la clase

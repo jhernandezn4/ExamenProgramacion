@@ -17,7 +17,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 namespace Progra1Bot.Clases
 {
 
-   public  class clsEjemplo2
+   public  class clsVersusBot
     {
         private static TelegramBotClient Bot;
 
