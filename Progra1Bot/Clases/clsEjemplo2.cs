@@ -177,7 +177,7 @@ namespace Progra1Bot.Clases
 
                 if (Index<11)
                 {
-                    lugar += "#" + Index + " " + fila["usuario"].ToString() + " con " + fila["punteo"].ToString() + " puntos";
+                    lugar += "#" + Index + " " + fila["usuario"].ToString() + " con " + fila["punteo"].ToString() + " puntos\n";
                 }
                 Index++;
             }

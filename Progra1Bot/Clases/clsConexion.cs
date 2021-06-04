@@ -70,7 +70,7 @@ namespace Progra1Bot.Clases
         }
         public DataTable MostrarPosiciones()
         {
-            string consulta = $"SELECT * FROM posiciones ORDER BY punteo";
+            string consulta = $"SELECT * FROM posiciones ORDER BY punteo desc";
             Console.WriteLine(consulta);
             return this.ConsultaSimple(consulta);
         }
