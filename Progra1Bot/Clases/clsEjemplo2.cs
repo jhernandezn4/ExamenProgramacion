@@ -25,7 +25,7 @@ namespace Progra1Bot.Clases
         public bool preguntando { get; set; }
         public  async Task IniciarTelegram()
         {
-            Bot = new TelegramBotClient("1870008757:AAFqh4pT2FZF1WK8j7XOlWiKrLa3cgnrz-k");
+            Bot = new TelegramBotClient("");
            
             var me = await Bot.GetMeAsync();
             Console.Title = me.Username;
